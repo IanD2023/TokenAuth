@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt" >
+
+<head>
+    <meta charset="UTF-8" >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TokenAuth</title>
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link rel="icon" type="imagem/png" href="{% static 'img/chave1.png' %}" />
+  
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/core.min.js"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.7.0/dist/sweetalert2.all.min.js
+"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/md5.js"></script>
+</head>
+
+<body>
+  <div  class="main">
+    <div class="container">
+      
+      <div class="row" >
+        
+        <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+          <div class="py-30 px-5 text-center">
+            <h2 class="text-white ">
+             <i class="fa fa-lock mr-1"></i><h class="font-weight-bold"/>Token<span class="font-size-xl text-primary font-weight-bold">Auth</span>
+            </h2>
+        </div>
+          <div class="hero-static content content-full js-appear-enabled animated fadeIn"> 
+            <div class="card-body p-4 p-sm-5" >
+          
+                {% block content %}<!-- default content text (typically empty) -->
+  
+                {% endblock %}
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </body>
+  <script src="{% static 'js/home.js'%}"> </script>
+  <script src="{% static 'js/modals.js'%}"> </script>
+</html>

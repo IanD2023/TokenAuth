@@ -1,0 +1,27 @@
+CREATE TABLE auth_user (
+   id serial PRIMARY KEY,
+   username VARCHAR(100) UNIQUE NOT NULL,
+   password VARCHAR(100) NOT NULL,
+   first_name VARCHAR(100) NOT NULL,
+   last_name VARCHAR(100) NOT NULL,
+   cpf VARCHAR(100) UNIQUE NOT NULL, 
+   email VARCHAR(100),
+   receber_email BOOLEAN,
+   is_superuser BOOLEAN,
+   last_login TIMESTAMPTZ,
+   is_active BOOLEAN,
+   is_staff BOOLEAN,
+   date_joined TIMESTAMPTZ);
+   
+   CREATE TABLE usuarios_identificacao (
+   id serial PRIMARY KEY,
+   codigo VARCHAR(100) UNIQUE NOT NULL,
+   id_cookie VARCHAR(100) UNIQUE NOT NULL
+   data TIMESTAMPTZ );
+
+  CREATE TABLE django_session (
+   expire_date TIMESTAMPTZ NOT NULL,
+   session_key VARCHAR(40) UNIQUE NOT NULL,
+   session_data TEXT NOT NULL
+   );
+

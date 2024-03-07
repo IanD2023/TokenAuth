@@ -1,0 +1,39 @@
+{% extends "home/index.html" %}
+{% load static %}
+{% block content %}
+
+              <form id="form-login" style="margin-top: 0px" method="POST" action="{% url 'autenticar' %}">
+                {% csrf_token %}
+                <div class="form-floating mb-3">
+                <label for="floatingInput" class="label">{{usuario}}</label>
+                </div>
+                <div class="form-floating mb-3 text-center">
+                    <div class="input-field">
+                      <input type="number" name="codigo" id="codigo" required spellcheck="false" value="{{user}}"> 
+                      <label>Usuário de PDV</label>
+                    </div>
+                  </div>
+                
+                <div class="form-floating mb-3 text-center">
+                  <div class="input-field">
+                    <input type="password" name="senha" required spellcheck="false" value="{{senha}}"> 
+                    <label>Senha</label>
+                  </div>
+                  <input type="hidden" id="email-validacao" name="validacaoemail" value="{{codigo_acesso}}">
+                  <input type="hidden" id="hash" name="hash" value="{{hash}}">
+                  <input type="hidden" id="cad" name="cad" value="{{cad}}">
+                </div>
+
+                <div class="d-flex justify-content-center mt-3 login_container">
+                  <button id="botao-submit" value="{{valor}}" class="btn btn-block btn-noborder btn-rounded btn-outline-secondary bg-white" style="width:100%;margin-top: 15px;border-radius: 15px;color:black" type="submit">
+                    <i class="fa fa-sign-in mr-10"></i> Gerar Senha</button>
+            </div>
+           
+            <div class="d-flex justify-content-center mt-3" >
+              <a href="{% url 'alterarsenha' %}"  style="border: 0; border-radius: 15px;margin: 0px;" class="btn btn-block btn-noborder btn-rounded btn-outline-secondary text-white">Esqueci a senha</a>           
+     
+              <a href="{% url 'criaracesso' %}"  style="border: 0; border-radius: 15px;margin: 0px;" class="btn btn-block btn-noborder btn-rounded btn-outline-secondary text-white">Primeiro Acesso</a>
+                  
+            </div>
+              </form>
+{% endblock %}

@@ -1,0 +1,82 @@
+body {
+  margin: 0px;
+  }
+  
+  .btn-login {
+    font-size: 0.9rem;
+    letter-spacing: 0.05rem;
+    padding: 0.75rem 1rem;
+  }
+  .main{
+    margin: 0px;    background: #007bff;    background:  #323d4c;    display:flex;    align-items: center;    height: 100vh;
+  }
+
+  .label{
+    color:red;
+    margin: 0px;
+  }
+  .barcode_group{
+    color:white;
+  }
+  .input{
+    
+    background-color: transparent;
+     border-radius: 5px;
+     width: 100%;
+     padding: 5px;
+     padding-left: 15px;
+     border-style: solid;
+     border-width: 1px;
+     border-color: lightgray;
+     color: white;
+  }
+
+  .input:focus { 
+    outline: none;
+    border-color: white;
+    box-shadow: 0 0 10px white;
+}
+
+ /* Import Google font - Poppins */
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+ .input-field{
+   position: relative;
+ }
+ .input-field input{
+  background-color: transparent;
+  border-radius: 5px;
+  width: 100%;
+  padding: 5px;
+  padding-left: 15px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: lightgray;
+  color: white;
+ }
+ .input-field label{
+   position: absolute;
+   top: 50%;
+   left: 15px;
+   transform: translateY(-50%);
+   color: lightgray;
+   font-size: 15px;
+   pointer-events: none;
+   transition: 0.3s;
+ }
+ input:focus{
+     outline: none;
+    border-color: white;
+   border: 2px solid white;
+ }
+ input:focus ~ label,
+ input:valid ~ label{
+   top: 0;
+   left: 15px;
+   font-size: 15px;
+   padding: 0 2px;
+   background: #323d4c;
+ }
+ .swal2-input {
+  text-align: center !important;
+}
